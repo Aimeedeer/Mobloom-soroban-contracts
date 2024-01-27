@@ -81,7 +81,7 @@ impl TokenTrait for Token {
     }
 
     fn allowance(e: Env, from: Address, spender: Address) -> i128 {
-        e.storage().instance().bump(
+        e.storage().instance().extend_ttl(
             INSTANCE_BUMP_AMOUNT_LOW_WATERMARK,
             INSTANCE_BUMP_AMOUNT_HIGH_WATERMARK,
         );
@@ -93,7 +93,7 @@ impl TokenTrait for Token {
 
         check_nonnegative_amount(amount);
 
-        e.storage().instance().bump(
+        e.storage().instance().extend_ttl(
             INSTANCE_BUMP_AMOUNT_LOW_WATERMARK,
             INSTANCE_BUMP_AMOUNT_HIGH_WATERMARK,
         );
@@ -103,7 +103,7 @@ impl TokenTrait for Token {
     }
 
     fn balance(e: Env, id: Address) -> i128 {
-        e.storage().instance().bump(
+        e.storage().instance().extend_ttl(
             INSTANCE_BUMP_AMOUNT_LOW_WATERMARK,
             INSTANCE_BUMP_AMOUNT_HIGH_WATERMARK,
         );
@@ -111,7 +111,7 @@ impl TokenTrait for Token {
     }
 
     fn spendable_balance(e: Env, id: Address) -> i128 {
-        e.storage().instance().bump(
+        e.storage().instance().extend_ttl(
             INSTANCE_BUMP_AMOUNT_LOW_WATERMARK,
             INSTANCE_BUMP_AMOUNT_HIGH_WATERMARK,
         );
@@ -119,7 +119,7 @@ impl TokenTrait for Token {
     }
 
     fn authorized(e: Env, id: Address) -> bool {
-        e.storage().instance().bump(
+        e.storage().instance().extend_ttl(
             INSTANCE_BUMP_AMOUNT_LOW_WATERMARK,
             INSTANCE_BUMP_AMOUNT_HIGH_WATERMARK,
         );
@@ -131,7 +131,7 @@ impl TokenTrait for Token {
 
         check_nonnegative_amount(amount);
 
-        e.storage().instance().bump(
+        e.storage().instance().extend_ttl(
             INSTANCE_BUMP_AMOUNT_LOW_WATERMARK,
             INSTANCE_BUMP_AMOUNT_HIGH_WATERMARK,
         );
@@ -146,7 +146,7 @@ impl TokenTrait for Token {
 
         check_nonnegative_amount(amount);
 
-        e.storage().instance().bump(
+        e.storage().instance().extend_ttl(
             INSTANCE_BUMP_AMOUNT_LOW_WATERMARK,
             INSTANCE_BUMP_AMOUNT_HIGH_WATERMARK,
         );
@@ -162,7 +162,7 @@ impl TokenTrait for Token {
 
         check_nonnegative_amount(amount);
 
-        e.storage().instance().bump(
+        e.storage().instance().extend_ttl(
             INSTANCE_BUMP_AMOUNT_LOW_WATERMARK,
             INSTANCE_BUMP_AMOUNT_HIGH_WATERMARK,
         );
@@ -176,7 +176,7 @@ impl TokenTrait for Token {
 
         check_nonnegative_amount(amount);
 
-        e.storage().instance().bump(
+        e.storage().instance().extend_ttl(
             INSTANCE_BUMP_AMOUNT_LOW_WATERMARK,
             INSTANCE_BUMP_AMOUNT_HIGH_WATERMARK,
         );
@@ -191,7 +191,7 @@ impl TokenTrait for Token {
         let admin = read_administrator(&e);
         admin.require_auth();
 
-        e.storage().instance().bump(
+        e.storage().instance().extend_ttl(
             INSTANCE_BUMP_AMOUNT_LOW_WATERMARK,
             INSTANCE_BUMP_AMOUNT_HIGH_WATERMARK,
         );
@@ -204,7 +204,7 @@ impl TokenTrait for Token {
         let admin = read_administrator(&e);
         admin.require_auth();
 
-        e.storage().instance().bump(
+        e.storage().instance().extend_ttl(
             INSTANCE_BUMP_AMOUNT_LOW_WATERMARK,
             INSTANCE_BUMP_AMOUNT_HIGH_WATERMARK,
         );
@@ -218,7 +218,7 @@ impl TokenTrait for Token {
         let admin = read_administrator(&e);
         admin.require_auth();
 
-        e.storage().instance().bump(
+        e.storage().instance().extend_ttl(
             INSTANCE_BUMP_AMOUNT_LOW_WATERMARK,
             INSTANCE_BUMP_AMOUNT_HIGH_WATERMARK,
         );
@@ -231,7 +231,7 @@ impl TokenTrait for Token {
         let admin = read_administrator(&e);
         admin.require_auth();
 
-        e.storage().instance().bump(
+        e.storage().instance().extend_ttl(
             INSTANCE_BUMP_AMOUNT_LOW_WATERMARK,
             INSTANCE_BUMP_AMOUNT_HIGH_WATERMARK,
         );

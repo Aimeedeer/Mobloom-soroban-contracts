@@ -42,7 +42,7 @@ pub fn write_allowance(
     e.storage().temporary().set(&key.clone(), &allowance);
 
     if amount > 0 {
-        e.storage().temporary().bump(
+        e.storage().temporary().extend_ttl(
             &key,
             low_watermarks,
             expiration_ledger

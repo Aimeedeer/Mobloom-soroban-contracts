@@ -3,7 +3,7 @@
 mod admin;
 mod allowance;
 mod balance;
-mod contract;
+pub mod contract;
 mod event;
 mod metadata;
 mod storage_types;
